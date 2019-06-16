@@ -18,6 +18,13 @@ class EditorTestClass(TestCase):
 
     #Test for the save method
     def test_save_method(self):
-        self.pius.save_editor()
+        self.alvin.save_editor()
         editors = Editor.objects.all()
         self.assertTrue(len(editors) > 0)
+
+    #Test for the Delete method
+    def test_delete_method(self):
+        self.alvin.delete_editor()
+        editors = Editor.objects.all()
+        self.assertTrue(len(editors) ==0)
+    
