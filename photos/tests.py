@@ -27,4 +27,9 @@ class EditorTestClass(TestCase):
         self.alvin.delete_editor()
         editors = Editor.objects.all()
         self.assertTrue(len(editors) ==0)
-    
+        
+    def tearDown(self):
+        Editor.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+        Image.objects.all().delete()

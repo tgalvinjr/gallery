@@ -14,6 +14,13 @@ class Editor(models.Model):
     def __str__(self):
         return self.first_name
 
+    class Meta:
+        ordering = ['first_name']    
+
+    def save_editor(self):
+        self.save()
+    
+
 class Location(models.Model):
     '''
     Contains the location of the image
@@ -42,4 +49,3 @@ class Image(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
 
 
-    
