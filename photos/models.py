@@ -15,3 +15,9 @@ class Location(models.Model):
     Shows the location of the image
     '''
     name = models.CharField(max_length =30)
+
+class Category(models.Model):
+    '''
+    shows the category of the pictures
+    '''
+    name = models.CharField(max_length =30, verbose_name = 'name')
