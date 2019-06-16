@@ -19,7 +19,8 @@ class Editor(models.Model):
 
     def save_editor(self):
         self.save()
-    
+    def delete_editor(self):
+        Editor.objects.all().delete()    
 
 class Location(models.Model):
     '''
