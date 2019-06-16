@@ -28,6 +28,10 @@ class Location(models.Model):
     '''
     name = models.CharField(max_length =30)
 
+    def save_location(self):
+        self.save()
+
+
 class Category(models.Model):
     '''
     Contains the category of the pictures
