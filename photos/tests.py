@@ -33,3 +33,21 @@ class EditorTestClass(TestCase):
         Location.objects.all().delete()
         Category.objects.all().delete()
         Image.objects.all().delete()
+
+
+class LocationTestClass(TestCase):
+    '''
+    Testing the Location model
+    '''
+
+    def setUp(self):
+         self.location = Location(name= 'Wendani')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.location,Location))
+
+    #Test for the save method
+    def test_save_method(self):
+        self.location.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
