@@ -10,7 +10,7 @@ def welcome(request):
 
 def single_image(request, image_id):
     try:
-        image = Image.objects.get(id=image_id)
+        image = Image.objects.filter(id=image_id)
     except ObjectDoesNotExist:
         raise Http404()
 
