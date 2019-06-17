@@ -47,6 +47,8 @@ class Category(models.Model):
     class Meta:
             verbose_name = "category"
             verbose_name_plural = "categories"
+    def __str__(self):
+        return self.name
 
 class Image(models.Model):
     '''
@@ -58,5 +60,8 @@ class Image(models.Model):
     image_location = models.ForeignKey(Location, unique=False, blank=True)
     image_category = models.ForeignKey(Category, blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.image_name
 
 
