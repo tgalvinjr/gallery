@@ -20,7 +20,8 @@ class Editor(models.Model):
     def save_editor(self):
         self.save()
     def delete_editor(self):
-        Editor.objects.all().delete()    
+        Editor.objects.all().delete()  
+    objects = models.Manager()  
 
 class Location(models.Model):
     '''
@@ -63,5 +64,6 @@ class Image(models.Model):
 
     def __str__(self):
         return self.image_name
+    objects = models.Manager()
 
 

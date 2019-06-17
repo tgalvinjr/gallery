@@ -5,6 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     url('^$', views.welcome, name='welcome'),
+    url(r'^image/(\d+)',views.single_image, name='image'), 
 ]
 
 if settings.DEBUG:
