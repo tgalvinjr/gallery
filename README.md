@@ -3,7 +3,7 @@
 ## Description
 #### A personal gallery application that allows users to display their favourite photos for others to see.
 
-##Features (The user can:)
+## Features (The user can:)
 * View different photos that interest me.
 * Click on a single photo to expand it and also view the details of the photo. The photo details must appear on a modal within the same route as the main page.
 * Search for different categories of photos. (ie. Travel, Food)
