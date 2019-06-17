@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% if title %}
-    <title>Gallery{{title}}</title>
+    <title>Gallery{{title}}</title>admin/photos/image/
     {% else %}
     <title> Gallery </title>
     {% endif %}
@@ -22,7 +22,11 @@
 
 <body>
     {% include "navbar.html" %}
-    {% block content %} <h1 class='text-center'> Welcome to your Favorite Photo Gallery</h1>{%endblock%}
+    {% block content %}
+    <div class="container">
+        <h1 class='text-center'> Welcome to your Favorite Photo Gallery</h1>
+    </div>
+    {%endblock%}
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% bootstrap_javascript %}

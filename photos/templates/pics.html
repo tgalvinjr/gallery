@@ -3,4 +3,13 @@
 {% block content %}
 {{block.super}}
 
+<div class="row">
+    {% for img in image %}
+    <div class="col-md-3" style="margin-top: 3%">
+        <img src="{{ img.image.url}}" alt="image" class="img-responsive" style="width: 320px; height: 215px;">
+    </div>
+    {% empty  %}
+    <p>Image is unavailable at the moment</p>
+    {% endfor%}
+</div>
 {% endblock %}
